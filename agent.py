@@ -29,7 +29,6 @@ class Agent:
         dir_d = game.direction == Direction.DOWN
 
         state = [
-            #dange straight
             (dir_r and game.is_collision(point_r)) or
             (dir_l and game.is_collision(point_l)) or
             (dir_u and game.is_collision(point_u)) or
@@ -51,7 +50,7 @@ class Agent:
             dir_l,
             dir_r,
             dir_u,
-            dir_d
+            dir_d,
 
             #food location
             game.food.x < game.head.x,
